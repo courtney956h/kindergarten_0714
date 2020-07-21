@@ -7,6 +7,7 @@
 1167 이상의 화면에서는 1167로 유지하고
 1167 이하의 화면에서는 100%로 바뀜*/
 
+
 #header { position: fixed; width: 100%; top: 0; left: 0;
     background: #fff; z-index: 99999;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); }
@@ -18,10 +19,7 @@
 .topmenu a:hover { color:rgb(255, 255, 255, 1) }    
 .topmenu .sns a { padding-right:10px; font-size:12.2px;  }
 .topmenu .sns a:first-child span { font-size:11px }
-.topmenu .login { position:absolute; top:0; right:0 }
-.topmenu .sns a { padding-right: 10px; font-size: 12.2px;  }
-.topmenu .sns a:first-child span { font-size: 11px }
-.topmenu .login { position:absolute; top: 0; right: 0; color: #000;}
+.topmenu .login { position:absolute; top:0; right:0; color:#000;}
 .topmenu .login a { padding-left:10px; font-size:11px }
 
 .logoNav { position:relative; height:76px; }
