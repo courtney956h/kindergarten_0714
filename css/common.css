@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+.row { max-width:1167px; margin:0 auto; }
+/*width 지정 때문에 가로 스크롤바가 생김 
+그래서 max-를 붙여주는게 좋음
+1167 이상의 화면에서는 1167로 유지하고
+1167 이하의 화면에서는 100%로 바뀜*/
+
+.skip a { display: block; background: #000; color: #fff; 
+    text-align: center;
+    width: 1px; height: 1px;
+    overflow: hidden; position: absolute; 
+    top: -100px; }
+    /* a의 상위 요소는 skip인데 skip의 상위 요소는 body
+    body가 부모일때는 position:relative 안줘도 됨 */
+.skip a:focus { width: 100%; height: auto;
+    padding: 10px 0px; position: fixed;
+    top: 0px; z-index: 9999999; }
+
+
+
+
+#header { position: fixed; width: 100%; top: 0; left: 0;
+    background: #fff; z-index: 99999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); }
+.topmenu .row { position:relative }    
+.topmenu { background:#f76f6f;
+    color:rgba(255,255,255,0.7);
+    padding:10px 0; letter-spacing:-0.5px; }
+.topmenu a { transition: all 0.5s; }
+.topmenu a:hover { color:rgb(255, 255, 255, 1) }    
+.topmenu .sns a { padding-right:10px; font-size:12.2px;  }
+.topmenu .sns a:first-child span { font-size:11px }
+.topmenu .login { position:absolute; top:0; right:0; color:#000;}
+.topmenu .login a { padding-left:10px; font-size:11px }
+
+.logoNav { position:relative; height:76px; }
+.logoNav h1 { color:#ffae3d; 
+    font-size:26.25px; line-height:76px;
+    font-weight:bold;  }
+
+.logoNav .nav { position:absolute; top:0; right:0; }
+.logoNav .nav .depth1 > li { float: left; /* 서브메뉴들이 있으면 display:inline-block으로 하지말고 float으로 바꿔주기 */
+    font-size:15.75px; line-height:76px;
+    padding-left:30px; font-weight:bold;
+    transition:all 0.5s; position: relative; }
+.logoNav .nav .depth1 > li:hover { color:#ffd23c; }
+.logoNav .nav .depth1 > li:first-child { color:#ffd23c }
+.logoNav .nav .depth1 > li > a:after { 
+    content:'\f078';
+    font-family:'Font Awesome 5 Free';
+    font-weight:900;
+    color:#ddd; padding-left:10px; }
+.logoNav .nav .depth1 > li:first-child > a:after,
+.logoNav .nav .depth1 > li:nth-child(5) > a:after { visibility: hidden;}
+
+.logoNav .depth2 { position: absolute; top: 85%; /*부모높이 바로 아래는 100%, 겹치면 숫자 내리면 됨*/
+    left: 0; width: 168px; background: #fff;
+    border-radius: 5px; padding: 0 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); display: none; }
+.logoNav .depth2:before { content: ''; position: absolute;
+    bottom: 100%; left: 0; 
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; }
+    
+.logoNav .depth1 > li:hover .depth2 { display: block; } /* display:block으로 다시 나타나게 함 */
+.logoNav .depth2 > li { line-height: 38px; /*detph1>li와는 다른 사이즈이기 때문에 상속받지 않고 따로 지정*/
+    color: #ffae3d; }
+.logoNav .depth2 > li:hover { color: #ffd23c; }
+
+
+
+
+#footer { text-align:center; 
+    font-size: 12.25px;}    
+.footerMenu { background:#eee;
+    color: #333; padding: 10px; }
+.footerMenu a { padding-left: 11px; }
+.footerMenu a:before { content: '|';
+    padding-right: 11px;
+    font-size: 6px; 
+    position: relative; top: -1px; } /* 현재 기준에서 -1px만큼 올라가는 것, absolute 안쓰고 | 넣기 */
+.footerMenu a:first-child:before { display: none; }
+
+.comInfo { background: #222; color: rgba(255,255,255,0.5);
+    padding: 40px 0; }
+.comInfo .sns a { font-size: 21px; padding: 4px 10px 10px;
+    display: inline-block; }
+.comInfo .info span { letter-spacing: -1px; padding-left: 5; }
+.comInfo .info span:before { content: '|';
+    padding-right: 7px; font-size: 6px;
+    position: relative; top: -1px; }
+
+.copyright { background:#0a0a0a; font-size: 10.5px; 
+    padding: 10px 0; color: #333; }
