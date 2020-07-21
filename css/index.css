@@ -7,6 +7,17 @@
 1167 이상의 화면에서는 1167로 유지하고
 1167 이하의 화면에서는 100%로 바뀜*/
 
+.skip a { display: block; background: #000; color: #fff; 
+    text-align: center;
+    width: 1px; height: 1px;
+    overflow: hidden; position: absolute; 
+    top: -100px; }
+    /* a의 상위 요소는 skip인데 skip의 상위 요소는 body
+    body가 부모일때는 position:relative 안줘도 됨 */
+.skip a:focus { width: 100%; height: auto;
+    padding: 10px 0px; position: fixed;
+    top: 0px; z-index: 9999999; }
+
 
 #header { position: fixed; width: 100%; top: 0; left: 0;
     background: #fff; z-index: 99999;
