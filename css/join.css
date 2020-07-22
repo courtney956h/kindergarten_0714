@@ -2,7 +2,7 @@
 @import "reset.css";
 @import "common.css";
 
-::placeholder { color: pink; }
+::placeholder { color: #555; }
 #join_page { padding: 217px 0 100px; }
 #join_page h2 { text-align: center;
     font-size: 30px; padding-bottom: 30px; }
