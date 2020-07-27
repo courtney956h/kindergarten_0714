@@ -34,7 +34,7 @@
 .topmenu .sns a:first-child span { font-size:11px }
 
 .topmenu .search_box { position: absolute; 
-    top: 0px; left: 50%; transform: translate(-50%); }
+    top: 0px; right: 50%; transform: translate(50%); }
 .topmenu .search_box fieldset { border: 2px solid #fff; 
     border-radius: 3px; height: 25px;}
 .topmenu .search_box input { border: none;
@@ -51,14 +51,20 @@
 
 .logoNav { position:relative; height:76px; }
 .logoNav h1 { color:#ffae3d; 
-    font-size:26.25px; line-height:76px;
-    font-weight:bold;  }
+    font-size:26.25px; padding: 25.875px 0px 24px; 
+    /* line-height는 반응형 시 조절이 힘드므로 padding으로 넣는게 나음 
+    76-26.25(글자크기)/2(상,하)=24.875*/
+    font-weight:bold; line-height: 15.75px;
+    /* h1과 li 안의 글씨 크기가 달라지므로 줄간격 크기가 달라지기 때문에
+    li의 글씨 크기와 동일한 line-height로 맞춰줌*/ }
 
 .logoNav .nav { position:absolute; top:0; right:0; }
 .logoNav .nav .depth1 > li { float: left; /* 서브메뉴들이 있으면 display:inline-block으로 하지말고 float으로 바꿔주기 */
-    font-size:15.75px; line-height:76px;
-    padding-left:30px; font-weight:bold;
+    font-size:15.75px; 
+    font-weight:bold;
     transition:all 0.5s; position: relative; }
+.logoNav .nav .depth1 > li > a { display: block;
+    padding: 27.5px 0px 27.5px 30px; }
 .logoNav .nav .depth1 > li:hover { color:#ffd23c; }
 .logoNav .nav .depth1 > li:first-child { color:#ffd23c }
 .logoNav .nav .depth1 > li > a:after { 
@@ -109,3 +115,4 @@
 
 .copyright { background:#0a0a0a; font-size: 10.5px; 
     padding: 10px 0; color: #333; }
+
