@@ -58,6 +58,9 @@
     /* h1과 li 안의 글씨 크기가 달라지므로 줄간격 크기가 달라지기 때문에
     li의 글씨 크기와 동일한 line-height로 맞춰줌*/ }
 
+.logoNav .open_nav { display: none; }
+.logoNav .close_nav { display: none; }
+
 .logoNav .nav { position:absolute; top:0; right:0; }
 .logoNav .nav .depth1 > li { float: left; /* 서브메뉴들이 있으면 display:inline-block으로 하지말고 float으로 바꿔주기 */
     font-size:15.75px; 
