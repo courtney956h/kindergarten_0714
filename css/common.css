@@ -27,6 +27,14 @@
 .topmenu { background:#f76f6f;
     color:rgba(255,255,255,0.7);
     padding:10px 0; letter-spacing:-0.5px; }
+.topmenu .search_box { position: absolute; 
+    top: 1px; left: 150px; }
+.topmenu .search_box fieldset { padding-right: 5px; }
+.topmenu .search_box input { border: none;
+    padding: 4px 0.5em; }
+.topmenu .search_box button { border: none;
+    background: none; color: rgba(255,255,255,0.7); }
+
 .topmenu a { transition: all 0.5s; }
 .topmenu a:hover { color:rgb(255, 255, 255, 1) }    
 .topmenu .sns a { padding-right:10px; font-size:12.2px;  }
