@@ -33,7 +33,9 @@
 .join_form .info_content select { height: 45px; 
     border: 1px solid #ccc; 
     padding: 0 1em; vertical-align: top; }
-.join_form .info_content select { appearance: none; }
+.join_form .info_content select { appearance: none; 
+    background: transparent; 
+    position: relative; z-index: 999;}
 .join_form .info_content select::-ms-expand { display: none; }
 .join_form .info_content .email_box:after { 
     content: '\f0dd'; font-family: 'Font Awesome 5 Free';
