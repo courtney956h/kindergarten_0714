@@ -45,10 +45,23 @@
     width: 80px; border: 1px solid #ccc; 
     border-radius: 5px; }
 .join_form .info_content button:hover { cursor: pointer; 
-    background: #ddd;}
-.join_form .gender_area label,
+    background: #ddd; }
+.join_form .gender_area label { line-height: 45px; 
+    padding-right: 15px; }
+.join_form .gender_area label:before { content: '\f058'; 
+    font-family: 'Font Awesome 5 Free'; font-weight: 400; 
+    color: #ddd; padding-right: 8px; }
+.join_form .gender_area input[type=radio]:checked + label:before { 
+    font-weight: 900; color: #f76f6f; }
+
+
 .join_form .hobby_area label { line-height: 45px; 
-    padding-right: 15px;}
+    padding-right: 15px; }
+
+.join_form .gender_area input[type=radio] { display: none; }
+.join_form .hobby_area input[type=checkbox] { display: none; }
+/*html과 css에서 label 다음에 input인 순서를 반드시 지켜줘야함 */
+
 
 .join_form .info_content textarea { height: 245px;
     width: 70%; border: 1px solid #ccc;
@@ -63,4 +76,4 @@
     background: #000; color: #fff;
     border: none; border-radius: 5px;
     font-size: 18px; margin: 0 20px; }
-.join_form .btn input[type=submit] { background: #f00; }
+.join_form .btn input[type=submit] { background: #f76f6f; }
